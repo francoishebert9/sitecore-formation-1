@@ -1,0 +1,23 @@
+<!-- [Title and Summary] -->
+<header class="page-header bg-media bg-parallax" >
+                @Html.Sitecore().Field("Image",new {@class="image-background"}).
+    <div class="container">
+        <ol class="breadcrumb">
+        
+            <li class="active">
+            <a href="Careers.html">Careers</a>
+            </li>
+        </ol>
+    </div>
+
+    <div class="container">
+        <h1>
+        @Html.Sitecore().Field("Heading")
+            <br/>
+            <small>
+                @Html.Sitecore().Field("Intro")
+            </small>				     
+        </h1>
+    </div>
+</header>
+<!-- [/Title and Summary] -->

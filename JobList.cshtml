@@ -1,0 +1,20 @@
+<!-- [Job List] -->
+<div class="col-md-8">
+    <div class="content-list joblist">
+        <ol class="media-list">
+                @foreach (var item in Model.Item.Children["Jobs"].Children) {
+                    <div class="media-body">
+                        <h3 class="media-heading">
+                            <a href="@Sitecore.Links.LinkManager.GetItemUrl(item)">
+                                @Html.Sitecore().Field("Heading", item)
+                            </a>
+                        </h3>
+                        <div class="description">
+                            <p>@Html.Sitecore().Field("Intro", item)</p>
+                        </div>
+                    </div>
+                }
+        </ol>
+    </div>
+</div>
+<!-- [/Job List] -->

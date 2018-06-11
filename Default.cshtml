@@ -1,0 +1,55 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+<title>@Html.Sitecore().Field("Heading",new {DisableWebEdit=true})</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta property="og:title" content=""/>
+<meta property="og:image" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:url" content="http://theadventurecompany/Company/Careers"/>  
+    <link href="Css/vendor.min.css" rel="stylesheet" />
+	<link href="Css/niteflight.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="Css/addition.css">
+</head>
+<body class="header-static ">
+    <div id="main-container">
+		@Html.Sitecore().Rendering("/sitecore/layout/renderings/jobs/pageheader")
+		<!-- [Page Content] -->
+		<main role="main">
+			@Html.Sitecore().Placeholder("pageContentHeader")
+			<section class="section section-full"> 
+				<div class="container">
+				  <div class="row">
+					<div class="col-md-8">
+						@Html.Sitecore().Placeholder("pageContentMain")
+					</div>
+					<!-- [Job Spotlight] -->
+					<div class="col-md-4">
+						@Html.Sitecore().Placeholder("pageContentRight")
+					</div>
+					<!-- [/Job Spotlight] -->
+				  </div>
+				</div>
+			</section>
+        </main>
+		<!-- [/Page Content] -->
+		@Html.Sitecore().Rendering("/sitecore/layout/renderings/jobs/footercontent")
+    </div>
+</body>
+
+</html>
